@@ -1,0 +1,9 @@
+{
+  "seed": 20261022,
+  "num_suppliers": 500,
+  "num_raw_lots": 10000,
+  "num_production_orders": 5000,
+  "num_finished_lots": 8000,
+  "num_deliveries": 20000,
+  "year": 2026
+}
