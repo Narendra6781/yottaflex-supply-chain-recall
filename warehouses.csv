@@ -1,0 +1,21 @@
+warehouse_id,warehouse_name,location,status
+WH-0001,Warehouse 01,Hyderabad,ACTIVE
+WH-0002,Warehouse 02,Hyderabad,ACTIVE
+WH-0003,Warehouse 03,Bengaluru,ACTIVE
+WH-0004,Warehouse 04,Mumbai,ACTIVE
+WH-0005,Warehouse 05,Bengaluru,ACTIVE
+WH-0006,Warehouse 06,Delhi,ACTIVE
+WH-0007,Warehouse 07,Hyderabad,ACTIVE
+WH-0008,Warehouse 08,Chennai,ACTIVE
+WH-0009,Warehouse 09,Hyderabad,ACTIVE
+WH-0010,Warehouse 10,Bengaluru,ACTIVE
+WH-0011,Warehouse 11,Mumbai,ACTIVE
+WH-0012,Warehouse 12,Bengaluru,ACTIVE
+WH-0013,Warehouse 13,Hyderabad,ACTIVE
+WH-0014,Warehouse 14,Hyderabad,ACTIVE
+WH-0015,Warehouse 15,Mumbai,ACTIVE
+WH-0016,Warehouse 16,Delhi,ACTIVE
+WH-0017,Warehouse 17,Bengaluru,ACTIVE
+WH-0018,Warehouse 18,Delhi,ACTIVE
+WH-0019,Warehouse 19,Bengaluru,ACTIVE
+WH-0020,Warehouse 20,Delhi,ACTIVE

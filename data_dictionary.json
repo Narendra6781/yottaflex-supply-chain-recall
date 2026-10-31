@@ -1,0 +1,89 @@
+{
+    "Supplier": {
+        "supplier_id": "PK, string, required, unique",
+        "supplier_name": "string, required",
+        "country": "string, required",
+        "risk_level": "LOW/MEDIUM/HIGH",
+        "status": "ACTIVE/INACTIVE",
+        "created_at": "datetime, required"
+    },
+    "MaterialLot": {
+        "raw_lot_id": "PK, string, required, unique",
+        "supplier_id": "FK -> Supplier",
+        "material_id": "FK -> Material",
+        "quantity": "float, required, unit=kg, >0",
+        "received_date": "date, required",
+        "expiry_date": "date, optional",
+        "status": "AVAILABLE/CONSUMED/QUARANTINED"
+    },
+    "Product": {
+        "product_id": "PK, string, unique",
+        "product_name": "string, required",
+        "category": "string, required",
+        "unit": "string, required",
+        "status": "ACTIVE/DISCONTINUED"
+    },
+    "BOM": {
+        "bom_id": "PK, string, unique",
+        "product_id": "FK -> Product",
+        "material_id": "FK -> Material",
+        "quantity_required": "float, required, >0",
+        "effective_from": "date",
+        "effective_to": "date, optional"
+    },
+    "ProductionOrder": {
+        "production_order_id": "PK, string, unique",
+        "product_id": "FK -> Product",
+        "bom_id": "FK -> BOM",
+        "planned_quantity": "integer, >0",
+        "start_date": "date",
+        "end_date": "date",
+        "status": "PLANNED/IN_PROGRESS/COMPLETED"
+    },
+    "FinishedLot": {
+        "finished_lot_id": "PK, string, unique",
+        "production_order_id": "FK -> ProductionOrder",
+        "product_id": "FK -> Product",
+        "produced_quantity": "integer, >0",
+        "production_date": "date",
+        "status": "AVAILABLE/QUARANTINED/RECALLED"
+    },
+    "Shipment": {
+        "shipment_id": "PK, string, unique",
+        "warehouse_id": "FK -> Warehouse",
+        "shipment_date": "date",
+        "carrier": "string",
+        "status": "CREATED/IN_TRANSIT/DELIVERED"
+    },
+    "Customer": {
+        "customer_id": "PK, string, unique",
+        "customer_name": "string",
+        "customer_type": "RETAILER/DISTRIBUTOR"
+    },
+    "Delivery": {
+        "delivery_id": "PK, string, unique",
+        "shipment_id": "FK -> Shipment",
+        "finished_lot_id": "FK -> FinishedLot",
+        "customer_id": "FK -> Customer",
+        "delivered_quantity": "integer, >0",
+        "delivery_date": "date",
+        "status": "PENDING/DELIVERED/QUARANTINED/RETURNED"
+    },
+    "RecallCase": {
+        "recall_id": "PK, string, unique",
+        "trigger_lot_id": "string, references raw or finished lot",
+        "trigger_type": "RAW/FINISHED",
+        "severity": "LOW/MEDIUM/HIGH/CRITICAL",
+        "created_at": "datetime",
+        "status": "OPEN/IN_PROGRESS/CLOSED"
+    },
+    "RecallAction": {
+        "action_id": "PK, string, unique",
+        "recall_id": "FK -> RecallCase",
+        "delivery_id": "FK -> Delivery, optional",
+        "action_type": "NOTIFY/QUARANTINE/RECOVER",
+        "quantity": "integer, >=0",
+        "action_date": "datetime",
+        "status": "PENDING/COMPLETED/FAILED"
+    }
+}

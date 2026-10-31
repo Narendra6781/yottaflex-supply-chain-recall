@@ -1,0 +1,26 @@
+material_id,material_name,unit,category
+MAT-0001,Raw Material 01,kg,CHEMICAL
+MAT-0002,Raw Material 02,kg,COMPONENT
+MAT-0003,Raw Material 03,kg,COMPONENT
+MAT-0004,Raw Material 04,kg,INGREDIENT
+MAT-0005,Raw Material 05,kg,COMPONENT
+MAT-0006,Raw Material 06,kg,CHEMICAL
+MAT-0007,Raw Material 07,kg,COMPONENT
+MAT-0008,Raw Material 08,kg,INGREDIENT
+MAT-0009,Raw Material 09,kg,PACKAGING
+MAT-0010,Raw Material 10,kg,PACKAGING
+MAT-0011,Raw Material 11,kg,CHEMICAL
+MAT-0012,Raw Material 12,kg,PACKAGING
+MAT-0013,Raw Material 13,kg,INGREDIENT
+MAT-0014,Raw Material 14,kg,COMPONENT
+MAT-0015,Raw Material 15,kg,PACKAGING
+MAT-0016,Raw Material 16,kg,COMPONENT
+MAT-0017,Raw Material 17,kg,INGREDIENT
+MAT-0018,Raw Material 18,kg,COMPONENT
+MAT-0019,Raw Material 19,kg,COMPONENT
+MAT-0020,Raw Material 20,kg,INGREDIENT
+MAT-0021,Raw Material 21,kg,COMPONENT
+MAT-0022,Raw Material 22,kg,PACKAGING
+MAT-0023,Raw Material 23,kg,PACKAGING
+MAT-0024,Raw Material 24,kg,PACKAGING
+MAT-0025,Raw Material 25,kg,COMPONENT
